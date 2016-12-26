@@ -1,0 +1,23 @@
+﻿
+
+   <div>
+       
+   </div>
+
+
+   <div  ng-controller="myCtrl" class="jumbotron text-center">
+        <h1>Gabriel page</h1>
+        <p>christian ===> {{message}}</p>
+       <p>{{nom}}</p>
+       <p>{{prenom}}</p>
+       <p>{{age}}</p>
+        <form ng-submit="addEntry(persone)">
+            name:<input type="text" ng-model="persone.name" required /><br />
+            firstname:<input type="text" ng-model="persone.firstname" required /><br />
+            age:<input type="text" ng-model="persone.age" required /><br />
+            <input type="submit" value="inserer" />
+        </form>
+
+       
+    </div>
+
