@@ -29,18 +29,13 @@ namespace WebApplication2
         }
 
         [WebMethod]
-        public Dictionary<string, string> getValue()
+        public void getValue()
         {
             JavaScriptSerializer jss = new JavaScriptSerializer();
-            // Context.Response.Write(jss.Serialize(arr[0]));
-            Dictionary<string, string> dico = new Dictionary<string, string>();
-            dico.Add("nom",arr[0]);
-            return dico;
-
-
-
-         }
-
+            User user = new WebApplication2.User("zaafrani", "gabriel", 26);
+            Context.Response.Write(jss.Serialize(user));
+        }
+        /*
         [WebMethod]
         public Dictionary<string, string> changeValues(string nom,string prenom,int age)
         {
@@ -50,5 +45,14 @@ namespace WebApplication2
             keyAndValue.Add("age", age.ToString());
             return keyAndValue;
          }
+         */
+
+        [WebMethod]
+        public User changeValues(string nom, string prenom, int age)
+        {
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            User user =  new User(nom,prenom,age);
+            return (user);
+        }
     }
 }

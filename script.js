@@ -83,11 +83,15 @@ scotchApp.controller("myCtrl", ['$scope','$http', function ($scope,$http) {
              responseType: "json",
             data:{nom:persone.name, prenom:persone.firstname,age:persone.age}
         }
-        
+
         $http(req).then(function (response) {
+           
+            
             $scope.nom = response.data.d.nom;
             $scope.prenom = response.data.d.prenom;
             $scope.age = response.data.d.age;
+            
+        
         });
             
     }

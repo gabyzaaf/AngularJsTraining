@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="webservice.asmx.cs">
       <DependentUpon>webservice.asmx</DependentUpon>
       <SubType>Component</SubType>
